@@ -1,0 +1,25 @@
+{
+    "name": "contensio/plugin-ratings",
+    "label": "Star Ratings",
+    "description": "Let visitors rate posts and pages 1–5 stars. Displays average rating and total count. Admin can reset ratings per content item.",
+    "author": "Contensio",
+    "author_url": "https://contensio.com",
+    "version": "1.0.0",
+    "provider": "Contensio\\Ratings\\RatingsServiceProvider",
+    "autoload": {
+        "psr-4": {
+            "Contensio\\Ratings\\": "src/"
+        }
+    },
+    "requires": {
+        "cms": "^2.0"
+    },
+    "menu": {
+        "placement": "tools",
+        "label": "Ratings",
+        "icon": "bi-star-half",
+        "route": "ratings.index",
+        "permission": "plugins.configure"
+    },
+    "removable": true
+}

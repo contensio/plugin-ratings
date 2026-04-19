@@ -1,0 +1,32 @@
+{
+    "name": "contensio/plugin-ratings",
+    "description": "Star ratings for Contensio — 1-5 stars per content item, average and count display, admin reset.",
+    "type": "library",
+    "license": "AGPL-3.0-or-later",
+    "keywords": ["contensio", "plugin", "ratings", "stars", "reviews"],
+    "homepage": "https://contensio.com",
+    "authors": [
+        {
+            "name": "Iosif Gabriel Chimilevschi",
+            "homepage": "https://contensio.com",
+            "role": "Creator"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "contensio/contensio": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Contensio\\Ratings\\": "src/"
+        }
+    },
+    "extra": {
+        "cms": {
+            "type": "plugin",
+            "provider": "Contensio\\Ratings\\RatingsServiceProvider"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
