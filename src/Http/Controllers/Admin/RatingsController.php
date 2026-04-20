@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Star Ratings — Contensio plugin.
+ * Star Ratings - Contensio plugin.
  * https://contensio.com
  *
  * @copyright   Copyright (c) 2026 Iosif Gabriel Chimilevschi
@@ -33,7 +33,7 @@ class RatingsController extends Controller
             ->get(['id', 'title', 'slug', 'type'])
             ->keyBy('id');
 
-        return view('ratings::admin.index', compact('rows', 'contentMap'));
+        return view('contensio-ratings::admin.index', compact('rows', 'contentMap'));
     }
 
     /**

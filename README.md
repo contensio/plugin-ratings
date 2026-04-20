@@ -1,4 +1,4 @@
-# Star Ratings — Contensio Plugin
+# Star Ratings - Contensio Plugin
 
 Let visitors rate any post or page 1–5 stars. Displays the average rating and total count. Users can update their rating at any time. Admins can reset ratings per content item.
 
@@ -7,13 +7,13 @@ Let visitors rate any post or page 1–5 stars. Displays the average rating and 
 ## Features
 
 - **1–5 star ratings** on any content item
-- **Live updates** — the average and count update instantly after rating via Alpine.js + `fetch`, no page reload
-- **Change rating** — clicking a different star updates the existing rating (no duplicates)
-- **Guest ratings** — IP-based by default; one rating per IP per content item
-- **Logged-in user ratings** — enforced by a unique database constraint on `(content_id, user_id)`
-- **Admin overview** — lists all rated content with average, count, and a reset button
-- **Admin reset** — delete all ratings for any content item in one click
-- **Embeddable** — drop the widget into any theme partial with one line
+- **Live updates** - the average and count update instantly after rating via Alpine.js + `fetch`, no page reload
+- **Change rating** - clicking a different star updates the existing rating (no duplicates)
+- **Guest ratings** - IP-based by default; one rating per IP per content item
+- **Logged-in user ratings** - enforced by a unique database constraint on `(content_id, user_id)`
+- **Admin overview** - lists all rated content with average, count, and a reset button
+- **Admin reset** - delete all ratings for any content item in one click
+- **Embeddable** - drop the widget into any theme partial with one line
 
 ---
 
@@ -27,8 +27,8 @@ Let visitors rate any post or page 1–5 stars. Displays the average rating and 
 
 ### Deduplication
 
-- **Logged-in users** — unique database constraint on `(content_id, user_id)`. Submitting again triggers an `UPDATE` on the existing row.
-- **Guests** — checked by IP address before inserting. If a row already exists for that IP + content item, it is updated.
+- **Logged-in users** - unique database constraint on `(content_id, user_id)`. Submitting again triggers an `UPDATE` on the existing row.
+- **Guests** - checked by IP address before inserting. If a row already exists for that IP + content item, it is updated.
 
 ---
 
@@ -54,7 +54,7 @@ The plugin is auto-discovered. Go to **Plugins** in the admin and enable it. The
 @include('ratings::partials.rating-widget', ['contentId' => $content->id])
 ```
 
-Replace `$content->id` with the ID of the content item you want to display ratings for. The widget is fully self-contained — it reads the current average, count, and the current user's existing rating on page load, and handles all interaction without any additional setup.
+Replace `$content->id` with the ID of the content item you want to display ratings for. The widget is fully self-contained - it reads the current average, count, and the current user's existing rating on page load, and handles all interaction without any additional setup.
 
 **Requirements for the embed to work:**
 
@@ -73,7 +73,7 @@ Shows all content items that have at least one rating, ordered by most ratings f
 - Visual star display (filled stars based on the floor of the average)
 - Numeric average (1 decimal place)
 - Total number of individual ratings
-- **Reset** button — deletes all ratings for that content item after a confirmation prompt
+- **Reset** button - deletes all ratings for that content item after a confirmation prompt
 
 ---
 
@@ -154,4 +154,4 @@ Unique constraint on `(content_id, user_id)` prevents duplicate rows for logged-
 
 ## License
 
-AGPL-3.0-or-later — see [LICENSE](LICENSE).
+AGPL-3.0-or-later - see [LICENSE](LICENSE).

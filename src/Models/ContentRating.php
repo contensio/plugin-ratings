@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Star Ratings — Contensio plugin.
+ * Star Ratings - Contensio plugin.
  * https://contensio.com
  *
  * @copyright   Copyright (c) 2026 Iosif Gabriel Chimilevschi
@@ -17,7 +17,7 @@ use Illuminate\Http\Request;
 
 class ContentRating extends Model
 {
-    protected $table = 'content_ratings';
+    protected $table = 'contensio_content_ratings';
 
     protected $fillable = [
         'content_id',

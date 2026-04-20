@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Star Ratings — Contensio plugin.
+ * Star Ratings - Contensio plugin.
  * https://contensio.com
  *
  * @copyright   Copyright (c) 2026 Iosif Gabriel Chimilevschi
@@ -16,7 +16,7 @@ return new class extends Migration
 {
     public function up(): void
     {
-        Schema::create('content_ratings', function (Blueprint $table) {
+        Schema::create('contensio_content_ratings', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('content_id')->index();
             $table->unsignedBigInteger('user_id')->nullable()->index();
@@ -32,6 +32,6 @@ return new class extends Migration
 
     public function down(): void
     {
-        Schema::dropIfExists('content_ratings');
+        Schema::dropIfExists('contensio_content_ratings');
     }
 };

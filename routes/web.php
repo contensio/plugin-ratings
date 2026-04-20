@@ -9,13 +9,13 @@ use Illuminate\Support\Facades\Route;
 Route::prefix(config('contensio.route_prefix', 'account'))
     ->middleware(['web', 'contensio.auth', 'contensio.admin'])
     ->group(function () {
-        Route::get('/ratings',                    [RatingsController::class, 'index']) ->name('ratings.index');
-        Route::delete('/ratings/{contentId}/reset', [RatingsController::class, 'reset']) ->name('ratings.reset');
+        Route::get('/ratings',                    [RatingsController::class, 'index']) ->name('contensio-ratings.index');
+        Route::delete('/ratings/{contentId}/reset', [RatingsController::class, 'reset']) ->name('contensio-ratings.reset');
     });
 
 // ── Public JSON API ───────────────────────────────────────────────────────────
 
 Route::middleware('web')->group(function () {
-    Route::post('/ratings/{contentId}', [RateController::class, 'rate'])    ->name('ratings.rate');
-    Route::get('/ratings/{contentId}',  [RateController::class, 'summary']) ->name('ratings.summary');
+    Route::post('/ratings/{contentId}', [RateController::class, 'rate'])    ->name('contensio-ratings.rate');
+    Route::get('/ratings/{contentId}',  [RateController::class, 'summary']) ->name('contensio-ratings.summary');
 });

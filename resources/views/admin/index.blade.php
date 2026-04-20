@@ -24,7 +24,7 @@
         <p class="text-lg font-medium text-gray-500">No ratings yet</p>
         <p class="text-sm mt-1">Embed the rating widget in your theme and ratings will appear here.</p>
         <p class="mt-4 text-xs font-mono bg-gray-50 border border-gray-200 rounded-lg inline-block px-4 py-2 text-gray-600">
-            @{{ include('ratings::partials.rating-widget', ['contentId' => $content->id]) }}
+            @{{ include('contensio-ratings::partials.rating-widget', ['contentId' => $content->id]) }}
         </p>
     </div>
     @else
@@ -70,7 +70,7 @@
                         {{ number_format($row->total_ratings) }}
                     </td>
                     <td class="px-5 py-3.5">
-                        <form method="POST" action="{{ route('ratings.reset', $row->content_id) }}"
+                        <form method="POST" action="{{ route('contensio-ratings.reset', $row->content_id) }}"
                               onsubmit="return confirm('Delete all {{ $row->total_ratings }} rating(s) for this item? This cannot be undone.')">
                             @csrf @method('DELETE')
                             <button type="submit"

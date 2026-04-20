@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Star Ratings — Contensio plugin.
+ * Star Ratings - Contensio plugin.
  * https://contensio.com
  *
  * @copyright   Copyright (c) 2026 Iosif Gabriel Chimilevschi
